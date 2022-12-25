@@ -262,7 +262,7 @@ def unsecure_login(request):
         for u in user:
             # is_matched = check_password(password,u.password)
             # if(is_matched  == True):
-            user = User.objects.get(username = u.username)
+            user = User.objects.get(username = username)
             login(request, user)
             return redirect('home')
     
